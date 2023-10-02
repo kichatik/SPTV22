@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package SPTV22MyHomeTasks;
-import tasks.NumberParcer;
 import java.util.Scanner;
+import tasks.CreateBooksArray;
+import tasks.NumberParcer;
 import tasks.TemperatureConverter;
 /**
  *
@@ -25,6 +26,7 @@ public class App {
             System.out.println("0. Закончить программу");
             System.out.println("1. Конвертер температуры");
             System.out.println("2. Парсер числа");
+            System.out.println("3. Создание массива книг");
             int task = scanner.nextInt(); scanner.nextLine();
             switch (task) {
                 case 0:
@@ -43,6 +45,11 @@ public class App {
                     numberParcer = new NumberParcer(scanner);
                     numberParcer.doParse();
                     break;
+                case 3:
+                    System.out.println("");
+                    CreateBooksArray createBooksArray;
+                    createBooksArray  = new CreateBooksArray();
+                    createBooksArray.doCreateArray();
                 default:
                     break;
                 
@@ -50,5 +57,7 @@ public class App {
         }while(repeat);
         System.out.println("До свидания!");
     }
+
+    
     
 }
